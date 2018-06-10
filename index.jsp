@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<style type="text/css">
+	body {
+		background-color: #ffffff;
+		font-size: 12px;
+		color: #ffffff;
+		font-family: helvetica, tahoma;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		cursor: default;
+	}
+	
+	#mid {
+		width: 530px;
+		margin-top: 150px;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+	}
+	
+	._float {
+		display: none;
+		position: absolute;
+		top: 0%;
+		left: 85%;
+		width: 15%;
+		height: 100%;
+		background-color: #eeeeee;
+		z-index: 1001;
+		-moz-opacity: 1;
+		opacity: 1;
+		filter: alpha(opacity=0);
+	}
+	
+	.dropbtn {
+		display: inline-block;
+		text-align: center;
+		text-decoration: none;
+		padding: 14px 10px;
+	}
+	
+	.dropbtn:hover,
+	.dropbtn:focus,
+	.dropbtn:active {
+		color: #009bdf;
+	}
+	
+	td {
+		height: 30px;
+		text-align: center;
+		color: #404040;
+		font-size: 20px;
+		table-layout: fixed;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	
+	a {
+		font-family: 'Helvetica Neue', 'Helvetica', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+		font-size: 14px;
+		text-decoration: none;
+		margin-left: 25px;
+	}
+	
+	a,
+	a:visited {
+		color: #0075c9;
+	}
+	
+	input {
+		width: 80%;
+		height: 25px;
+		border-radius: 4px;
+		border: 0.5px solid #ffffff;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	
+	input::-ms-input-placeholder {
+		text-align: center;
+	}
+	
+	input::-webkit-input-placeholder {
+		text-align: center;
+	}
+	
+	p {
+		font-size: 9px;
+		color: #555555;
+	}
+</style>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>HELLO ?</title>
+		<link rel="shortcut icon" href="favicon.ico" />
+		<script src="js/mine_sweeper.js"></script>
+		<script src="js/login.js"></script>
+	</head>
+
+	<body onload="refresh()">
+		<div>
+			<div style="text-align: right;">
+				<a class="dropbtn" href="#" onclick="showLogin()">登录</a>
+				<a class="dropbtn" href="#" onclick="showRegister()">注册</a>&emsp;&emsp;
+			</div>
+			<div class="pic" id="mid">
+				<div id="sweep_" align="center" style="margin-bottom: 30px;">
+					<a onclick="refresh()" style="margin-left: 0px;">AGAIN?&emsp;XXXD</a>
+				</div>
+				<table oncontextmenu="doNothing()" id="mytab" cellspacing="2" style="width: 530px;height: 270px;border: 0px;table-layout:fixed;margin-bottom: 20px;">
+					<tbody>
+						<tr>
+							<td bgcolor="#404040" onclick="clickTb(0)"></td>
+							<td bgcolor="#404040" onclick="clickTb(1)"></td>
+							<td bgcolor="#404040" onclick="clickTb(2)"></td>
+							<td bgcolor="#404040" onclick="clickTb(3)"></td>
+							<td bgcolor="#404040" onclick="clickTb(4)"></td>
+							<td bgcolor="#404040" onclick="clickTb(5)"></td>
+							<td bgcolor="#404040" onclick="clickTb(6)"></td>
+							<td bgcolor="#404040" onclick="clickTb(7)"></td>
+							<td bgcolor="#404040" onclick="clickTb(8)"></td>
+							<td bgcolor="#404040" onclick="clickTb(9)"></td>
+							<td bgcolor="#404040" onclick="clickTb(10)"></td>
+							<td bgcolor="#404040" onclick="clickTb(11)"></td>
+							<td bgcolor="#404040" onclick="clickTb(12)"></td>
+							<td bgcolor="#404040" onclick="clickTb(13)"></td>
+							<td bgcolor="#404040" onclick="clickTb(14)"></td>
+							<td bgcolor="#404040" onclick="clickTb(15)"></td>
+						</tr>
+						<tr>
+							<td bgcolor="#404040" onclick="clickTb(16)"></td>
+							<td bgcolor="#404040" onclick="clickTb(17)"></td>
+							<td bgcolor="#404040" onclick="clickTb(18)"></td>
+							<td bgcolor="#404040" onclick="clickTb(19)"></td>
+							<td bgcolor="#404040" onclick="clickTb(20)"></td>
+							<td bgcolor="#404040" onclick="clickTb(21)"></td>
+							<td bgcolor="#404040" onclick="clickTb(22)"></td>
+							<td bgcolor="#404040" onclick="clickTb(23)"></td>
+							<td bgcolor="#404040" onclick="clickTb(24)"></td>
+							<td bgcolor="#404040" onclick="clickTb(25)"></td>
+							<td bgcolor="#404040" onclick="clickTb(26)"></td>
+							<td bgcolor="#404040" onclick="clickTb(27)"></td>
+							<td bgcolor="#404040" onclick="clickTb(28)"></td>
+							<td bgcolor="#404040" onclick="clickTb(29)"></td>
+							<td bgcolor="#404040" onclick="clickTb(30)"></td>
+							<td bgcolor="#404040" onclick="clickTb(31)"></td>
+						</tr>
+						<tr>
+							<td bgcolor="#404040" onclick="clickTb(32)"></td>
+							<td bgcolor="#404040" onclick="clickTb(33)"></td>
+							<td bgcolor="#404040" onclick="clickTb(34)"></td>
+							<td bgcolor="#404040" onclick="clickTb(35)"></td>
+							<td bgcolor="#404040" onclick="clickTb(36)"></td>
+							<td bgcolor="#404040" onclick="clickTb(37)"></td>
+							<td bgcolor="#404040" onclick="clickTb(38)"></td>
+							<td bgcolor="#404040" onclick="clickTb(39)"></td>
+							<td bgcolor="#404040" onclick="clickTb(40)"></td>
+							<td bgcolor="#404040" onclick="clickTb(41)"></td>
+							<td bgcolor="#404040" onclick="clickTb(42)"></td>
+							<td bgcolor="#404040" onclick="clickTb(43)"></td>
+							<td bgcolor="#404040" onclick="clickTb(44)"></td>
+							<td bgcolor="#404040" onclick="clickTb(45)"></td>
+							<td bgcolor="#404040" onclick="clickTb(46)"></td>
+							<td bgcolor="#404040" onclick="clickTb(47)"></td>
+						</tr>
+						<tr>
+							<td bgcolor="#404040" onclick="clickTb(48)"></td>
+							<td bgcolor="#404040" onclick="clickTb(49)"></td>
+							<td bgcolor="#404040" onclick="clickTb(50)"></td>
+							<td bgcolor="#404040" onclick="clickTb(51)"></td>
+							<td bgcolor="#404040" onclick="clickTb(52)"></td>
+							<td bgcolor="#404040" onclick="clickTb(53)"></td>
+							<td bgcolor="#404040" onclick="clickTb(54)"></td>
+							<td bgcolor="#404040" onclick="clickTb(55)"></td>
+							<td bgcolor="#404040" onclick="clickTb(56)"></td>
+							<td bgcolor="#404040" onclick="clickTb(57)"></td>
+							<td bgcolor="#404040" onclick="clickTb(58)"></td>
+							<td bgcolor="#404040" onclick="clickTb(59)"></td>
+							<td bgcolor="#404040" onclick="clickTb(60)"></td>
+							<td bgcolor="#404040" onclick="clickTb(61)"></td>
+							<td bgcolor="#404040" onclick="clickTb(62)"></td>
+							<td bgcolor="#404040" onclick="clickTb(63)"></td>
+						</tr>
+						<tr>
+							<td bgcolor="#404040" onclick="clickTb(64)"></td>
+							<td bgcolor="#404040" onclick="clickTb(65)"></td>
+							<td bgcolor="#404040" onclick="clickTb(66)"></td>
+							<td bgcolor="#404040" onclick="clickTb(67)"></td>
+							<td bgcolor="#404040" onclick="clickTb(68)"></td>
+							<td bgcolor="#404040" onclick="clickTb(69)"></td>
+							<td bgcolor="#404040" onclick="clickTb(70)"></td>
+							<td bgcolor="#404040" onclick="clickTb(71)"></td>
+							<td bgcolor="#404040" onclick="clickTb(72)"></td>
+							<td bgcolor="#404040" onclick="clickTb(73)"></td>
+							<td bgcolor="#404040" onclick="clickTb(74)"></td>
+							<td bgcolor="#404040" onclick="clickTb(75)"></td>
+							<td bgcolor="#404040" onclick="clickTb(76)"></td>
+							<td bgcolor="#404040" onclick="clickTb(77)"></td>
+							<td bgcolor="#404040" onclick="clickTb(78)"></td>
+							<td bgcolor="#404040" onclick="clickTb(79)"></td>
+						</tr>
+						<tr>
+							<td bgcolor="#404040" onclick="clickTb(80)"></td>
+							<td bgcolor="#404040" onclick="clickTb(81)"></td>
+							<td bgcolor="#404040" onclick="clickTb(82)"></td>
+							<td bgcolor="#404040" onclick="clickTb(83)"></td>
+							<td bgcolor="#404040" onclick="clickTb(84)"></td>
+							<td bgcolor="#404040" onclick="clickTb(85)"></td>
+							<td bgcolor="#404040" onclick="clickTb(86)"></td>
+							<td bgcolor="#404040" onclick="clickTb(87)"></td>
+							<td bgcolor="#404040" onclick="clickTb(88)"></td>
+							<td bgcolor="#404040" onclick="clickTb(89)"></td>
+							<td bgcolor="#404040" onclick="clickTb(90)"></td>
+							<td bgcolor="#404040" onclick="clickTb(91)"></td>
+							<td bgcolor="#404040" onclick="clickTb(92)"></td>
+							<td bgcolor="#404040" onclick="clickTb(93)"></td>
+							<td bgcolor="#404040" onclick="clickTb(94)"></td>
+							<td bgcolor="#404040" onclick="clickTb(95)"></td>
+						</tr>
+						<tr>
+							<td bgcolor="#404040" onclick="clickTb(96)"></td>
+							<td bgcolor="#404040" onclick="clickTb(97)"></td>
+							<td bgcolor="#404040" onclick="clickTb(98)"></td>
+							<td bgcolor="#404040" onclick="clickTb(99)"></td>
+							<td bgcolor="#404040" onclick="clickTb(100)"></td>
+							<td bgcolor="#404040" onclick="clickTb(101)"></td>
+							<td bgcolor="#404040" onclick="clickTb(102)"></td>
+							<td bgcolor="#404040" onclick="clickTb(103)"></td>
+							<td bgcolor="#404040" onclick="clickTb(104)"></td>
+							<td bgcolor="#404040" onclick="clickTb(105)"></td>
+							<td bgcolor="#404040" onclick="clickTb(106)"></td>
+							<td bgcolor="#404040" onclick="clickTb(107)"></td>
+							<td bgcolor="#404040" onclick="clickTb(108)"></td>
+							<td bgcolor="#404040" onclick="clickTb(109)"></td>
+							<td bgcolor="#404040" onclick="clickTb(110)"></td>
+							<td bgcolor="#404040" onclick="clickTb(111)"></td>
+						</tr>
+						<tr>
+							<td bgcolor="#404040" onclick="clickTb(112)"></td>
+							<td bgcolor="#404040" onclick="clickTb(113)"></td>
+							<td bgcolor="#404040" onclick="clickTb(114)"></td>
+							<td bgcolor="#404040" onclick="clickTb(115)"></td>
+							<td bgcolor="#404040" onclick="clickTb(116)"></td>
+							<td bgcolor="#404040" onclick="clickTb(117)"></td>
+							<td bgcolor="#404040" onclick="clickTb(118)"></td>
+							<td bgcolor="#404040" onclick="clickTb(119)"></td>
+							<td bgcolor="#404040" onclick="clickTb(120)"></td>
+							<td bgcolor="#404040" onclick="clickTb(121)"></td>
+							<td bgcolor="#404040" onclick="clickTb(122)"></td>
+							<td bgcolor="#404040" onclick="clickTb(123)"></td>
+							<td bgcolor="#404040" onclick="clickTb(124)"></td>
+							<td bgcolor="#404040" onclick="clickTb(125)"></td>
+							<td bgcolor="#404040" onclick="clickTb(126)"></td>
+							<td bgcolor="#404040" onclick="clickTb(127)"></td>
+						</tr>
+						<tr>
+							<td bgcolor="#404040" onclick="clickTb(128)"></td>
+							<td bgcolor="#404040" onclick="clickTb(129)"></td>
+							<td bgcolor="#404040" onclick="clickTb(130)"></td>
+							<td bgcolor="#404040" onclick="clickTb(131)"></td>
+							<td bgcolor="#404040" onclick="clickTb(132)"></td>
+							<td bgcolor="#404040" onclick="clickTb(133)"></td>
+							<td bgcolor="#404040" onclick="clickTb(134)"></td>
+							<td bgcolor="#404040" onclick="clickTb(135)"></td>
+							<td bgcolor="#404040" onclick="clickTb(136)"></td>
+							<td bgcolor="#404040" onclick="clickTb(137)"></td>
+							<td bgcolor="#404040" onclick="clickTb(138)"></td>
+							<td bgcolor="#404040" onclick="clickTb(139)"></td>
+							<td bgcolor="#404040" onclick="clickTb(140)"></td>
+							<td bgcolor="#404040" onclick="clickTb(141)"></td>
+							<td bgcolor="#404040" onclick="clickTb(142)"></td>
+							<td bgcolor="#404040" onclick="clickTb(143)"></td>
+						</tr>
+					</tbody>
+				</table>
+				<div id="nav_menu" align="center">
+					<a href="blog/blog_home.jsp" style="margin-left: 0px;">ARTICLE</a>
+					<a href="blog/blog_home.jsp">PICTURE</a>
+					<a href="blog/blog_home.jsp">NOTPOEM</a>
+					<a href="blog/blog_home.jsp">MADEBYU</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="rg_fl" class="_float">
+			<table style="width: 100%;height: 100%;">
+				<tr>
+					<td style="vertical-align: middle;text-align: center;">
+						<div>
+							<form>
+								<p>账号&ensp;</p>
+								<input id="rg_ac" placeholder="≤25位数字\字母 " onKeyUp="value=value.replaceAll(/[^\w\.\/]/ig, '') "onblur="" maxlength="25 "></input>
+								<br/>
+								<p>昵称&ensp;<br/></p>
+								<input id="rg_nm" placeholder="≤25位 " onKeyUp="value=value.replaceAll(/^\s+|\s+$/g, '')" maxlength="25 "></input>
+								<br/>
+								<p>密码&ensp;</p>
+								<input id="rg_psw" type="password" placeholder="6-25位数字\字母 " onKeyUp="value=value.replaceAll(/[^\w\.\/]/ig, '') " maxlength="25 "></input>
+								<br/>
+								<p>确认密码&ensp;</p>
+								<input id="rg_psw_ck " type="password" onKeyUp="value=value.replaceAll(/[^\w\.\/]/ig, '') " maxlength="25 "></input>
+								<div style="padding: 20px;">
+									<a style="margin-left: 0px;" href="#" onclick="register()">确认</a>
+									<a style="margin-left: 6px;" href="#" onclick="closeFloat()">关闭</a>
+									<a style="margin-left: 6px;" href="#" onclick="showLogin()">登录</a>
+								</div>
+							</form>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="lg_fl" class="_float">
+			<table style="width: 100%;height: 100%;">
+				<tr>
+					<td style="vertical-align: middle;text-align: center;">
+						<div>
+							<form>
+								<p>账号&ensp;</p>
+								<input id="lg_ac" onKeyUp="value=value.replace(/[^\w\.\/]/ig, '') " maxlength="25 "></input>
+								<br/><br/>
+								<p>密码&ensp;</p>
+								<input id="lg_psw" type="password" onKeyUp="value=value.replace(/[^\w\.\/]/ig, '') " maxlength="25 "></input>
+								<br/><br/>
+								<div style="padding: 20px;">
+									<a style="margin-left: 0px;" href="#" onclick="login()">确认</a>
+									<a style="margin-left: 6px;" href="#" onclick="closeFloat()">关闭</a>
+									<a style="margin-left: 6px;" href="#" onclick="showRegister()">注册</a>
+								</div>
+							</form>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+
+</html>
