@@ -48,7 +48,7 @@ function loadPoems() {
 		request = new ActiveXObject("Microsoft.XMLHTTP");
 	}
 	if(request) {
-		request.open("GET", "poem.html", true);
+		request.open("GET", "data/poem.txt", true);
 		request.onreadystatechange = function() {
 			if(request.readyState === 4) {
 				if(request.status == 200 || request.status == 0) {
