@@ -15,6 +15,8 @@
 	
 	#b_area {
 		width: 100%;
+		padding-top: 40px;
+		display: inline-block;
 	}
 	
 	ul,
@@ -22,29 +24,25 @@
 		list-style: none;
 	}
 	
-	ul {
-		padding-left: 10px;
-		width: 30%;
-	}
-	
 	li {
-		background: #fefefe;
+		background: #FFFFFF;
 		width: 100%;
-		height: 40px;
+		height: 65px;
 		line-height: 40px;
 		vertical-align: middle;
-		font-size: 18px;
-		text-align: left;
-		margin-left: 10px;
+		font-size: 24px;
+		text-align: right;
+		margin-left: 0px;
 		font: "微软雅黑";
 	}
 	
 	li:hover {
-		color: #555555;
+		color: #FFFFFF;
 	}
 	
 	.poem_title {
 		text-decoration: none;
+		margin-right: 0px;
 	}
 	
 	.poem_title:link {
@@ -55,13 +53,14 @@
 		color: #555555;
 	}
 </style>
-<script type="application/javascript" src="js/poem_home.js">
-</script>
+
 <html>
 
 	<head>
 		<meta charset="UTF-8">
 		<title>NOT POEM</title>
+		<script type="application/javascript" src="js/poem_home.js"></script>
+		<link rel="shortcut icon" href="favicon.ico" />
 	</head>
 
 	<body onload="refresh()">
@@ -73,14 +72,14 @@
 				<<< </a>-->
 		</div>
 		<div id="b_area">
-			<ul id="title_list">
-				<li>
-					<a class="poem_title" href="#" onclick="updateContent()">路过一间出租屋</a>
-				</li>
-			</ul>
+			<div style="float: left;width:40%;margin-right:0px;padding-right: 0px;">
+				<ul id="title_list">
 
-			<div id="content" style="width: 70%; height: 100%;">
-
+				</ul>
+			</div>
+			<!--<div style="width: 15%; height: 100px; float: left;"></div>-->
+			<div style="width: 60%; color:#666666;height: 100%; float: right;">
+				<p id="content" style=" padding-left:24%;font: '微软雅黑';font-size: 20px;line-height:28px;text-align: left;"></p>
 			</div>
 		</div>
 	</body>
