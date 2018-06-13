@@ -48,7 +48,7 @@ function loadPoems() {
 		request = new ActiveXObject("Microsoft.XMLHTTP");
 	}
 	if(request) {
-		request.open("GET", "data/poem.txt", true);
+		request.open("GET", "data/poem.html", true);
 		request.onreadystatechange = function() {
 			if(request.readyState === 4) {
 				if(request.status == 200 || request.status == 0) {
@@ -84,9 +84,12 @@ function loadPoems() {
 					}
 					for(j = 0, len = poems.length; j < len; j++) {
 						var lii = "<li><a class=\"poem_title\" href=\"#\" onclick=\"updateContent('" + poems[j].title + "')\">" + poems[j].title + "</a></li>";
-						console.log(lii);
 						document.getElementById("title_list").innerHTML += lii;
 					}
+					if(poems.length > 0) {
+						updateContent(poems[0].title);
+					}
+
 				}
 			}
 		}
