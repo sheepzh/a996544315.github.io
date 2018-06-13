@@ -59,7 +59,6 @@ function loadPoems() {
 					for(j = 0, len = lineTxt.length; j < len; j++) {
 						var line = lineTxt[j];
 						if(line.indexOf("ID=") != -1) { //按ID查询
-
 							if(poem != null) { //存储前一首poem
 								poems.push(poem);
 							}
@@ -82,6 +81,7 @@ function loadPoems() {
 					if(poem != null) { //存储最后一首
 						poems.push(poem);
 					}
+
 					for(j = 0, len = poems.length; j < len; j++) {
 						var lii = "<li><a class=\"poem_title\" href=\"#\" onclick=\"updateContent('" + poems[j].title + "')\">" + poems[j].title + "</a></li>";
 						document.getElementById("title_list").innerHTML += lii;
