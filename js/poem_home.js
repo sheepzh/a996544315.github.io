@@ -30,10 +30,10 @@ function updateContent(title) {
 	var titles = document.getElementsByClassName("poem_title");
 	for(j = 0, l = titles.length; j < l; j++) {
 		if(current != null && current == titles[j].innerText) {
-			titles[j].style.color = "#555555";
+			titles[j].style.color = "#333333";
 		}
 		if(title == titles[j].innerText) {
-			titles[j].style.color = "#0075C9";
+			titles[j].style.color = "#3CADE4";
 		}
 	}
 
