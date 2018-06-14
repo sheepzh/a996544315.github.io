@@ -1,5 +1,5 @@
 //9*16 = 144
-var totalMine = 26;
+var totalMine = 27;
 var mineMatrix = new Array(144);
 var invisedMatrix = new Array(144);
 var notInversed = 144 - totalMine;

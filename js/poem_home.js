@@ -11,7 +11,7 @@ function Poem(id, title, lines) {
 function refresh() {
 	var h = window.innerHeight;
 	loadPoems();
-	document.getElementById("b_area").style.height = h;
+	document.getElementById("b_area").style.height = (h - 160) + "px";
 }
 
 function updateContent(title) {
@@ -22,8 +22,9 @@ function updateContent(title) {
 			break;
 		}
 	}
-	console.log(poem.title);
+	//	console.log(poem.title);
 	if(poem != null) {
+		//		console.log(poem.lines);
 		document.getElementById("content").innerText = poem.lines;
 	}
 	var titles = document.getElementsByClassName("poem_title");
