@@ -101,5 +101,5 @@ function inverse(i) {
 function showEntrance() {
 	var box = document.getElementById("sweep_");
 	if(box.childElementCount == 1)
-		box.innerHTML += "<a  href=\"blog/blog_home.jsp\">『扫雷秘籍』</a>";
+		box.innerHTML += "<a  href=\"#\">『扫雷秘籍』</a>";
 }
