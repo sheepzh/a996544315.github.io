@@ -25,10 +25,10 @@
 		display: none;
 		position: absolute;
 		top: 0%;
-		left: 85%;
-		width: 15%;
+		left: 37.5%;
+		width: 25%;
 		height: 100%;
-		background-color: #eeeeee;
+		background-color: #FFFFFF;
 		z-index: 1001;
 		-moz-opacity: 1;
 		opacity: 1;
@@ -92,6 +92,15 @@
 		color: #555555;
 	}
 </style>
+
+<script type="text/javascript">
+	var showing = false;
+
+	function showFriends() {
+		document.getElementById("float_link").style.visibility = showing ? "hidden" : "visible";
+		showing = !showing;
+	}
+</script>
 <html>
 
 	<head>
@@ -280,11 +289,16 @@
 					</tbody>
 				</table>
 				<div id="nav_menu" align="center">
-					<a href="#" style="margin-left: 0px;">ARTICLE</a>
+					<a href="#" style="margin-left: 0px;">NOTHING</a>
 					<a href="#">PICTURE</a>
 					<a href="poem_home.html">NOTPOEM</a>
 					<a href="#">呈现:</a>
-					<a href="#">FRIENDS</a>
+					<a href="#" onclick="showFriends()">FRIENDS</a>
+				</div>
+				<br /> <br />
+				<div id="float_link" align="center" style="visibility: hidden;">
+					<a style="color: #555555;margin-left: 0px;">>>>></a>
+					<a href="https://gothamninja.github.io/gotham.github.io/" target="_blank">Gotham</a>
 				</div>
 			</div>
 		</div>
