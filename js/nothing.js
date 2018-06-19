@@ -26,7 +26,7 @@ function loadThings() {
 						var contents = tile.split("`")
 						console.log(contents);
 						var toAdd = "<div style=\"width: 100%;margin-top: 100px;height: auto;\"><div style=\"width: 100%;height: auto;margin-bottom:24px;text-align: center;font-size: 25px;\"><a class=\"_title\" href=\"" + contents[1];
-						toAdd += "\">";
+						toAdd += "\" target=\"_blank\">";
 						toAdd += contents[2];
 						toAdd += "</a></div><div style=\"width: 60%;margin: auto;text-align: center;\"><p class=\"_date\">";
 						toAdd += contents[3];
