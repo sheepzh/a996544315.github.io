@@ -15,7 +15,6 @@ function loadRels() {
 				if(request.status == 200 || request.status == 0) {
 					var txt = request.responseText;
 					relList = txt.split("\r\n");
-					console.log(getRel("意象", 20))
 				}
 			}
 		}
