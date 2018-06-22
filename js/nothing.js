@@ -14,17 +14,14 @@ function loadThings() {
 			if(request.readyState === 4) {
 //				if(request.status == 200 || request.status == 0) {
 					var lines = request.responseText.split("\r\n");
-					console.log(lines);
 					for(var j = 0; j < lines.length; j++) {
 						var nn = Math.floor(j / 4);
 						var toAdd = "`"+lines[j];
-						console.log(nn+"   "+toAdd);
 						things[nn] += ("`" + lines[j]);
 					}
 					for(var j = 0; j < things.length; j++) {
 						var tile = things[j];
 						var contents = tile.split("`")
-						console.log(contents);
 						var toAdd = "<div style=\"width: 100%;margin-top: 100px;height: auto;\"><div style=\"width: 100%;height: auto;margin-bottom:24px;text-align: center;font-size: 25px;\"><a class=\"_title\" href=\"" + contents[1];
 						toAdd += "\" target=\"_blank\">";
 						toAdd += contents[2];

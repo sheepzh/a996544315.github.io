@@ -15,6 +15,7 @@ function loadRels() {
 				if(request.status == 200 || request.status == 0) {
 					var txt = request.responseText;
 					relList = txt.split("\r\n");
+					document.getElementById("tips").innerHTML = "请输入一个『意象』 e.g. " + getRand2();
 				}
 			}
 		}
@@ -22,7 +23,6 @@ function loadRels() {
 	} else {
 		alert("error");
 	}
-
 }
 
 function getRel(word, limitN) {
@@ -42,4 +42,24 @@ function getRel(word, limitN) {
 		}
 	}
 	return ret;
+}
+
+function getRand2() {
+	var v1 = Math.floor(Math.random() * (relList.length));
+	var v2 = Math.floor(Math.random() * (relList.length));
+
+	var s1 = relList[v1].split(':')
+	txt1 = s1[0];
+	var ret = "<a href=\"#\" onclick=\"searchRel('" + txt1 + "')\" style=\"text-decoration: none;color: #009BDF;\">" + txt1 + "</a>";
+	if(v1 != v2) {
+		s1 = relList[v2].split(":");
+		txt1 = s1[0];
+		ret += (" " + "<a href=\"#\" onclick=\"searchRel('" + txt1 + "')\" style=\"text-decoration: none;color: #009BDF;\">" + txt1 + "</a>");
+	}
+	return ret;
+}
+
+function searchRel(word) {
+	document.getElementById("imagery_input").value = word;
+	document.getElementById("_showRel").click();
 }

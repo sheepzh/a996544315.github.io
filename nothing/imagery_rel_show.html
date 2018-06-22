@@ -13,12 +13,12 @@
 		}
 		var rels = getRel(txt, maxRelNum);
 		if(rels == null || rels.size == 0) {
-			document.getElementById("tips").innerText = "无数据，换个词试试？"
+			document.getElementById("tips").innerHTML = "无数据，换个词试试？"
 			var op = {}
 			chart.setOption(op, true);
 			return;
 		}
-		document.getElementById("tips").innerText = "请输入一个『意象』 e.g. 大海 乌鸦"
+		document.getElementById("tips").innerHTML = "请输入一个『意象』 e.g. " + getRand2();
 		var dt = []; //节点
 		var lk = []; //边
 		var w = 600;
@@ -80,9 +80,7 @@
 			if(params.name.indexOf(">") != -1) {
 				return false;
 			}
-
-			document.getElementById("imagery_input").value = params.name;
-			document.getElementById("_showRel").click();
+			searchRel(params.name);
 		});
 	}
 </script>
@@ -128,7 +126,7 @@
 	</head>
 
 	<body onload="loadRels()">
-		<p id="tips" style="width: 100%;text-align: center;font-size: 18px;padding-top: 45px;">请输入一个『意象』 e.g. 上帝 乌鸦</p>
+		<p id="tips" style="width: 100%;text-align: center;font-size: 18px;padding-top: 45px;"></p>
 		<div style="text-align: center;">
 			<form>
 				<input id="imagery_input" style="width: 130px;" onfocus="this.value=''" onkeypress="if(event.keyCode==13) {_showRel.click();return false;}" onafterupdate="value=value.replace(/[^\u4E00-\u9FA5]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\u4E00-\u9FA5]/g,''))" />
@@ -141,5 +139,6 @@
 		</div>
 
 	</body>
+	
 
 </html>
