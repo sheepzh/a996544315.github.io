@@ -1,4 +1,4 @@
-var relList = new Array;
+﻿var relList = new Array;
 
 function loadRels() {
 	relList.splice(0, relList.length); //清空数组
@@ -45,8 +45,8 @@ function getRel(word, limitN) {
 }
 
 function getRand2() {
-	var v1 = Math.floor(Math.random() * (relList.length));
-	var v2 = Math.floor(Math.random() * (relList.length));
+	var v1 = Math.floor(Math.random() * (relList.length-9));
+	var v2 = Math.floor(Math.random() * (relList.length-9));
 
 	var s1 = relList[v1].split(':')
 	txt1 = s1[0];
