@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MarkdownPad Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-family:"΢���ź�";
+  text-align:center;
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  color: #777;
+  font-size: 16px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<blockquote>
+<p>2018年6月，于北碚，张恒瑶(妹）作</p>
+</blockquote>
+<p>张军今天打牌又输了，这是这个星期来输的第五次。</p>
+<p>他走的时候，没有来时的兴奋，只敢耷拉着脑袋，看着自己的脚尖走路。</p>
+<p>路过打酒厂，张军提走自己的酒壶留下一句“这次赊账”便走了。</p>
+<p>老板娘没说话连头也没抬，似乎早就料到他会这么说。</p>
+<p>张军本开始只出来打酒的，也没打算赊账，可哪里晓得遇到了火急火燎去打麻将的王胖子，于是就半推半就地和他去了，结果到头来还是亏了。</p>
+<p>张军一路沉默着回家。中午出来的时候还是大太阳，这会儿却是乌云密布。</p>
+<p>张军脚还没踏进厂里，守门的伍老头就一路慌张地跑过来。“哎哟，快去看看哟，你们家那个又和别人吵起来了。”</p>
+<p>张军在听到这句话的时候，眉头皱的更厉害了，脚却不愿意挪进门了。伍老头接过他的酒，也是费了好大力气把他拉到了车间。</p>
+<p>“你就是想让我多做点！这么多零件我一个人怎么做的完？”</p>
+<p>曾燕叉着腰，两脚前后站着，扬着圆润的下颚，嘴唇拉紧，咬牙切齿地瞪着刘棠。如果她哭出来，说不定能缓和一点气氛。</p>
+<p>刘棠气也不打一处来。这个生产组本来人就少，最近厂里生意又好，货根本做不过来，曾燕倒好，一天上班半天，休息半天，自己不过是把这周她本就该做的分配给她而已，却被她在这儿骂一顿。</p>
+<p>“你讲点道理要不要得，这些本来就是你该做的。”</p>
+<p>“我呸！你们这些龟儿子就是在陷害我，看我老实就好欺负，什么都叫我做！”</p>
+<p>刘棠已经不愿与曾燕吵了，今天运气不好，就当是被够咬了一口。她摆摆手，退出了人群，又回到了自己的工作台前。</p>
+<p>张军此时刚好过来，见人群都散了，才把曾燕拉回了员工宿舍。</p>
+<p>十平米大的房间摆着稀少的家居陈设。</p>
+<p>张军放下酒壶，却被曾燕一把抢过：“你今天是不是又去打牌了？是不是又输了？你还喝酒？你身上还剩几个钱？”</p>
+<p>张军不耐烦地推开曾燕指着自己鼻子的手，走到窗前，推开了窗。</p>
+<p>今天有点闷，外面还是阴晴一片，估计要下雨。</p>
+<p>打开窗子的片刻，曾燕又在唠叨，“刘棠那个臭婆娘，不是个好人，我看他们都不是好人”。</p>
+<p>“我在这个厂干不下去了，做这么多活工资又不涨。你给我钱我明天就回老家去！”</p>
+<p>张军无动于衷，伫立在窗前发神。</p>
+<p>曾燕又露出了和刘棠吵架的那副嘴脸，见张军没有动作，愤怒地一把扯过他的外套开始翻找钱。</p>
+<p>张军重心不稳被拉到了床上。</p>
+<p>曾燕还在找，张军的沉默似乎给了她嚣张的理由。</p>
+<p>她不放弃，翻了衣服无果，开始翻张军的裤子口袋。</p>
+<p>张军的眼神里充满鄙夷，厌恶，嫌弃。曾燕膀大腰粗的身材，覆盖了他的眼球。</p>
+<p>他想到了癫痫的母狗。</p>
+<p>或许他也同时在想，自己当时是发了什么情才会和她结婚。</p>
+<p>曾燕疯狂的寻找，张军终于忍无可忍，起身将曾燕按在床上，扬手就是一个巴掌。</p>
+<p>清晰的撞击声想透了整排宿舍楼，随即而来的是曾燕的尖叫。</p>
+<p>张军不予置理，扬手又是一个巴掌。曾燕起初会反抗，但终究力气抵不过张军，她只有呜咽，不敢叫骂，今天的张军太可怕了，她看到了他眼里的怒火，恨不得烧她成灰烬的怒火。</p>
+<p>她看着张军的脸慢慢扭曲，像是脸部也会患静脉曲张。</p>
+<p>这场暴力行为进行了很久，曾燕的脸开始抽搐，嘴角开始渗血。</p>
+<p>门外的走廊有其他人走过，却没人驻足，他们都不愿意管这家子破事。</p>
+<p>外面有雨滴拍打玻璃的声音。啪嗒啪嗒像心碎的声音？</p>
+<p>声音渐渐地渐渐地大了，响亮了，雨滴密集，像今天透支的悲伤被急切的催还。整个城市在灰暗中哭泣，房间里有幸存的红色。</p>
+<p>张军松了气，颓然地一屁股坐在了地上。他的气快消了，换来了无助害怕。</p>
+<p>曾燕的哭声被掩盖在了雨声里。</p>
+<p>房间里静悄悄。</p>
+<h2>完</h2>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
